@@ -28,8 +28,8 @@ namespace CheeseMVC.Controllers
         public IActionResult Add()
         {
 
-            List<CheeseCategory> categories = context.Categories.ToList();
-            AddCheeseViewModel addCheeseViewModel = new AddCheeseViewModel(categories);
+            List<CheeseCategory> category = context.Categories.ToList();
+            AddCheeseViewModel addCheeseViewModel = new AddCheeseViewModel(category);
             return View(addCheeseViewModel);
         }
 
